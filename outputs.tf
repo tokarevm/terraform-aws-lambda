@@ -4,7 +4,7 @@ output "build_result_filename" {
 }
 
 output "s3_bucket" {
-  value = "${aws_s3_bucket_object.this.id}"
+  value = "${aws_s3_bucket_object.this.bucket}"
 }
 
 output "s3_key" {
@@ -12,5 +12,5 @@ output "s3_key" {
 }
 
 output "s3_path" {
-  value = "s3://${aws_s3_bucket_object.this.id}/${aws_s3_bucket_object.this.key}"
+  value = "s3://${aws_s3_bucket_object.this.bucket}/${aws_s3_bucket_object.this.key}"
 }
