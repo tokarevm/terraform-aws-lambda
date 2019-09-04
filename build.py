@@ -155,7 +155,8 @@ with tempdir() as temp_dir:
                 run(
                     pip_command,
                     'install',
-                    '--prefix=',
+                    '--user',
+                    '--install-option="--prefix="'
                     '--target=.',
                     '--requirement=requirements.txt',
                 )
